@@ -1,0 +1,23 @@
+{
+    "name": "fred/bit-switch",
+    "description": "bit switch helper to handle multiple options by a single integer value",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fred07",
+            "email": "fivesec10@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8"
+    },
+    "autoload": {
+        "psr-4": {
+            "fred\\": "src/"
+        }
+    }
+}
