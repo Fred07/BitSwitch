@@ -30,7 +30,7 @@ class BitSwitch
      */
     private $nextPosCursor = 1;
 
-    public function __construct(int $binaryVal, array $options = [])
+    public function __construct(int $binaryVal = 0, array $options = [])
     {
         $this->value = $binaryVal;
 
