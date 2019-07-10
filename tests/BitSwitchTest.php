@@ -12,13 +12,13 @@ class BitSwitchTest extends TestCase
     {
         $bitValue = bindec(b'101');
         $bitSwitch = new BitSwitch($bitValue);
-        $bitSwitch->setOption('first');
-        $bitSwitch->setOption('second');
-        $bitSwitch->setOption('third');
+        $bitSwitch->setOption('a');
+        $bitSwitch->setOption('b');
+        $bitSwitch->setOption('c');
 
-        $this->assertTrue($bitSwitch->isOptionOn('first'));
-        $this->assertFalse($bitSwitch->isOptionOn('second'));
-        $this->assertTrue($bitSwitch->isOptionOn('third'));
+        $this->assertTrue($bitSwitch->isOptionOn('a'));
+        $this->assertFalse($bitSwitch->isOptionOn('b'));
+        $this->assertTrue($bitSwitch->isOptionOn('c'));
     }
 
     /**
@@ -28,10 +28,10 @@ class BitSwitchTest extends TestCase
     {
         // prepare
         $bitValue = bindec(b'000');
-        $bitSwitch = new BitSwitch($bitValue, ['first', 'second']);
+        $bitSwitch = new BitSwitch($bitValue, ['a', 'b']);
 
         // test
-        $bitSwitch->on('second');
+        $bitSwitch->on('b');
 
         // assert
         $expected = bindec(b'010');
@@ -47,11 +47,11 @@ class BitSwitchTest extends TestCase
     {
         // prepare
         $bitValue = bindec(b'110');
-        $bitSwitch = new BitSwitch($bitValue, ['first', 'second', 'third']);
+        $bitSwitch = new BitSwitch($bitValue, ['a', 'b', 'c']);
 
         // test
-        $bitSwitch->off('third');
-        $bitSwitch->off('first');
+        $bitSwitch->off('c');
+        $bitSwitch->off('a');
 
         // assert
         $expected = bindec(b'010');

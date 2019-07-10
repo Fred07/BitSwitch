@@ -8,6 +8,11 @@ namespace Fred;
  */
 class BitSwitch
 {
+    /**
+     * binary format
+     *
+     * @var int
+     */
     private const BASE = 2;
 
     /**
@@ -55,6 +60,8 @@ class BitSwitch
     }
 
     /**
+     * Switch bit on
+     *
      * @param string $optName
      */
     public function on(string $optName): void
@@ -65,6 +72,8 @@ class BitSwitch
     }
 
     /**
+     * Switch bit off
+     *
      * @param string $optName
      */
     public function off(string $optName): void
@@ -75,6 +84,7 @@ class BitSwitch
     }
 
     /**
+     * Get value of total bit combination
      * @return int
      */
     public function getValue(): int
@@ -123,6 +133,7 @@ class BitSwitch
     }
 
     /**
+     * Get max value according options
      * @return int
      */
     private function getMax(): int
