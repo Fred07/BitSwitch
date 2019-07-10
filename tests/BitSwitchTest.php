@@ -77,4 +77,20 @@ class BitSwitchTest extends TestCase
         // assert
         $this->assertEquals($expected, $actual);
     }
+
+    /**
+     * @test
+     */
+    public function it_should_return_correct_value_after_operates(): void
+    {
+        $bitSwitch = new BitSwitch(0, ['a', 'b', 'c']);
+
+        $bitSwitch->on('a');
+        $bitSwitch->on('c');
+
+        $expected = bindec(b'101');
+        $actual = $bitSwitch->getValue();
+
+        $this->assertEquals($expected, $actual);
+    }
 }
