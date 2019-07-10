@@ -106,6 +106,14 @@ class BitSwitch
     }
 
     /**
+     * @return string
+     */
+    public function getValueAsBinString(): string
+    {
+        return (string) $this;
+    }
+
+    /**
      * @param int $bitPosition
      * @return bool
      */
